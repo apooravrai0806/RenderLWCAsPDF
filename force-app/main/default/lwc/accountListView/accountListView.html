@@ -1,0 +1,41 @@
+<!--
+  @description       : 
+  @author            : Apoorav Rai
+  @group             : 
+  @last modified on  : 02-07-2023
+  @last modified by  : Apoorav Rai
+-->
+<template>
+    <lightning-card>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-3">
+                <div class="slds-accordion__summary">
+                    <div style="float:left">
+                        <lightning-icon icon-name="standard:case"></lightning-icon>
+                    </div>
+                    <div class="slds-p-left_x-small" style="float:left;line-height: normal;">
+                        <span style="font-weight:blod">Case</span><br>
+                        <span style="text-decoration:underline;font-weight: bold;">{selectListView}</span>
+                    </div>
+                    <div class="slds-p-left_x-small" style="float:left">
+                        <lightning-button-menu alternative-text="List View" onselect={handleMenuSelect}>
+                            <lightning-menu-item label="Last 7 Days" value="last7Days"> </lightning-menu-item>
+                            <lightning-menu-item label="Last 1 Year" value="last365Days"> </lightning-menu-item>
+                            <lightning-menu-item label="Last 2 Year" value="last730Days"></lightning-menu-item>
+                        </lightning-button-menu>
+                    </div>
+                </div>
+                <div style="border: top 2px;"></div>
+            </div>
+            <div class="slds-col slds-size_1-of-3"></div>
+            <div class="slds-col slds-size_1-of-3">
+                <div class="slds-float_right slds-p-right_x-small"><lightning-button name="RenderAsPdf" label="Export"
+                        onclick={handleOnClick}></lightning-button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-p-top_medium"></div>
+        <lightning-datatable key-field="Id" data={data} columns={columns}>
+        </lightning-datatable>
+    </lightning-card>
+</template>

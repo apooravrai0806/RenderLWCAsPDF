@@ -1,0 +1,16 @@
+<!--
+  @description       : 
+  @author            : Apoorav Rai
+  @group             : 
+  @last modified on  : 02-14-2023
+  @last modified by  : Apoorav Rai
+-->
+<apex:page controller="CaseController" renderAs="PDF">
+  <apex:pageBlock title="Case List">
+        <apex:dataTable value="{!GetCase}" var="case" width="75%">
+            <apex:column value="{!case.Id}" headerValue="Id"/>
+            <apex:column value="{!case.CaseNumber}" headerValue="Case Number"/>
+            <apex:column value="{!case.Origin}" headerValue="Origin"/>
+        </apex:dataTable>
+    </apex:pageBlock>
+</apex:page>
