@@ -1,14 +1,21 @@
-# Contribute
+# Render LWC AS PDF
 
-You can also contribut to the project clone main branch and start working on it.
+This Repo contains the work using which we can render list of records into PDF
 
-# Salesforce DX Project: Next Steps
+## What Components it Contains
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+### 1. LWC
 
-## How Do You Plan to Deploy Your Changes?
+It contains a component which contains the logic to show records based on filters like last 7 days , Last 365 days and last 730 days.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+### 2. Class
+
+It acts like a controller for both LWC component and Visualforce page.
+
+### 3. Visualforce Page
+
+This page is use to render the content as PDF.
+
 
 ## Configure Your Salesforce DX Project
 
